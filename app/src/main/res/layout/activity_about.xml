@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.awesome.zhen.mylanceapp.About">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/login_wallpaper_blur"
+            android:id="@+id/imageView18"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/appicon"
+                android:id="@+id/imageView20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp" />
+
+            <TextView
+                android:text="L A N C E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/textView"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:layout_below="@+id/imageView20"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:text="华人之家"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_below="@+id/textView"
+                android:fontFamily="sans-serif-light"
+                android:layout_alignEnd="@+id/textView"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:text="LANCE 的主要目的是提供一个平台好让海外的华人更加容易寻找工作。除此之外，它也附有多种功能，即可以租房，也可以买卖二手货，物业转让或出售。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="16sp"
+                android:padding="20dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:srcCompat="@drawable/phoneicon"
+                    android:id="@+id/imageButton4"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="20dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:text="联系: +353 83 1861716"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:srcCompat="@drawable/emailicon"
+                    android:id="@+id/imageButton5"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="20dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:text="Email: hzj94@hotmail.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

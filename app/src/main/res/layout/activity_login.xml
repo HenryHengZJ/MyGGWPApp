@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.awesome.zhen.mylanceapp.MainActivity"
+    android:background="@android:color/background_dark">
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="270dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="100dp"
+        android:id="@+id/fbloginBtn"
+        android:background="@drawable/btn_background"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="270dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/googleloginBtn"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignEnd="@+id/imageView4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/login_wallpaper"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:alpha="0.7" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cast_expanded_controller_bg_gradient_light" />
+
+    <Button
+        android:text="注册"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerBtn"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/transparent"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        android:textAllCaps="false"
+        android:layout_above="@+id/imageView2"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/btn_background"
+        android:id="@+id/imageView2"
+        android:layout_marginBottom="98dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/emailoginBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="电邮登录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailoginBtn"
+        android:background="@drawable/emaillogin"
+        android:textColor="@color/buttonTextColor"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-light"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/imageView4"
+        app:srcCompat="@drawable/googlebtn_background"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/emailoginBtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:text="谷歌登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="@color/buttonTextColor"
+        android:layout_alignTop="@+id/googleloginBtn"
+        android:layout_marginTop="13dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="L A N C E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="141dp"
+        android:fontFamily="sans-serif-light"
+        android:id="@+id/textView"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+
+    <TextView
+        android:text="海外华人之家"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignEnd="@+id/textView"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:text="脸书登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/buttonTextColor"
+        android:layout_alignTop="@+id/fbloginBtn"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

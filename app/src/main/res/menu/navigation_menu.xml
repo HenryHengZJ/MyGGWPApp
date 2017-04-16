@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group_feature"
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_work"
+        android:icon = "@drawable/ic_work_black_24dp"
+            android:checked="true"
+        android:title="招聘" />
+
+        <item android:id="@+id/nav_rent"
+        android:icon = "@drawable/ic_store_black_24dp"
+        android:title="租房" />
+
+        <item android:id="@+id/nav_secondhand"
+        android:icon = "@drawable/ic_add_shopping_cart_black_24dp"
+        android:title="二手" />
+
+        <item android:id="@+id/nav_business"
+            android:icon = "@drawable/ic_public_black_24dp"
+            android:title="商务" />
+
+    </group>
+
+    <group android:id="@+id/group_settings"
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_settings"
+            android:icon = "@drawable/ic_settings_black_24dp"
+            android:title="设置" />
+
+        <item android:id="@+id/nav_about"
+            android:icon = "@drawable/ic_info_black_24dp"
+            android:title="关于" />
+
+        <item android:id="@+id/nav_logout"
+            android:icon = "@drawable/ic_reply_black_24dp"
+            android:title="登出" />
+
+    </group>
+</menu>

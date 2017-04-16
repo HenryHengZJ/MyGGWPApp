@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1004980108230",
+    "firebase_url": "https://my-gg-app.firebaseio.com",
+    "project_id": "my-gg-app",
+    "storage_bucket": "my-gg-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004980108230:android:4ecc908d28953c07",
+        "android_client_info": {
+          "package_name": "com.awesome.zhen.mylanceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004980108230-onpm7eknpgdabli9kdt1qcvgnl3lujko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awesome.zhen.mylanceapp",
+            "certificate_hash": "e0438f24a19149ac507813bb81112dc7cec0479b"
+          }
+        },
+        {
+          "client_id": "1004980108230-kv0lmmafghuccj8lbksgcflj7iuh91mm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX3s8Y0CA2RwBF5vxhX9tVqV5Gg1S2UHE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004980108230-kv0lmmafghuccj8lbksgcflj7iuh91mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

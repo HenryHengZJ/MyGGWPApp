@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:title="更换密码"
+        android:key="chgpassword" />
+    <PreferenceCategory
+        android:title = "邮件通知">
+
+        <SwitchPreference
+            android:title="点赞"
+            android:summary="有新赞时通过邮件通知我"
+            android:key="emaillike"/>
+
+        <SwitchPreference
+            android:title="评论"
+            android:summary="有新评论时通过邮件通知我"
+            android:key="emailcomment"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title = "手机通知">
+
+        <SwitchPreference
+            android:title="点赞"
+            android:summary="有新赞时通过手机通知我"
+            android:key="pushlike"/>
+
+        <SwitchPreference
+            android:title="评论"
+            android:summary="有新评论时通过手机通知我"
+            android:key="pushcomment"/>
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
