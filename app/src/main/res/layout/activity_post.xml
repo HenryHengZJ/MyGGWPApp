@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.awesome.zhen.mylanceapp.PostActivity"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/login_wallpaper_blur"
+        android:id="@+id/imageView1"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+            android:alpha="1" />
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/add_photo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageButton1"
+            android:background="@drawable/input_background"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines ="10"
+                android:layout_weight="0.2"
+                android:id="@+id/postTitle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/edittext_background"
+            android:hint="标题..."
+            android:textColorHint="@android:color/white"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_below="@+id/imageButton1"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:gravity="top|center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColorLink="@android:color/white" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:layout_weight ="0.5"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines ="10"
+                android:hint ="详情..."
+                android:scrollHorizontally="false"
+                android:id="@+id/postDescrip"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/edittext_background"
+                android:paddingLeft="10dp"
+                android:gravity="top|center_vertical"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColorLink="@android:color/white" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/location_24"
+                    android:id="@+id/imageView13"
+                    android:layout_below="@+id/postDescrip"
+                    android:layout_alignStart="@+id/postDescrip"
+                    android:layout_alignBottom="@+id/Locationbtn"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+
+                <Button
+                    android:text="地址"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Locationbtn"
+                    android:fontFamily="sans-serif-light"
+                    android:background="@drawable/edittext_bottomline"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/postDescrip"
+                    android:layout_weight="1"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/phone_24"
+                    android:id="@+id/imageView14"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/postTel"
+                    android:layout_weight="1"
+                    android:hint="联系"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_bottomline"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="13dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/category_24"
+                    android:id="@+id/imageView15"
+                    android:layout_gravity="center_vertical" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categorybtn"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/edittext_bottomline"
+                    android:hint="类别"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+            android:text="发布"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmit"
+            android:background="@drawable/contsignupbtn_background"
+            android:textColor="@color/cardview_light_background"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

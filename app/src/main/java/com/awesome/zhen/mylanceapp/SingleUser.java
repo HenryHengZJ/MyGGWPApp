@@ -54,10 +54,12 @@ public class SingleUser extends Fragment {
 
     Activity context;
 
+    private FirebaseRecyclerAdapter<bLOG,BlogViewHolder> firebaseRecyclerAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        
         View rootView = inflater.inflate(R.layout.single_user, container, false);
         context=getActivity();
 
@@ -145,118 +147,120 @@ public class SingleUser extends Fragment {
             }
         });
 
-        FirebaseRecyclerAdapter<bLOG,BlogViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<bLOG, BlogViewHolder>(
-                bLOG.class,
-                R.layout.blog_row,
-                BlogViewHolder.class,
-                mQueryCurrentUser
+        if(firebaseRecyclerAdapter ==null) {
 
-        ) {
+            firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<bLOG, BlogViewHolder>(
+                    bLOG.class,
+                    R.layout.blog_row,
+                    BlogViewHolder.class,
+                    mQueryCurrentUser
 
-            @Override
-            protected void populateViewHolder(BlogViewHolder viewHolder, bLOG model, int position) {
+            ) {
 
-                final String post_key = getRef(position).getKey();
-                final String keyval = model.getKey();
-                final String category_key = model.getCategory();
-                final String location_key = model.getLocation();
-                final String imageid = model.getImage();
+                @Override
+                protected void populateViewHolder(BlogViewHolder viewHolder, bLOG model, int position) {
 
-                viewHolder.setTitle(model.getTitle());
-                viewHolder.setDesc(model.getDesc());
-                viewHolder.setTelephone(model.getTelephone());
-                viewHolder.setLocation(model.getLocation());
-                viewHolder.setUsername(model.getUsername());
-                viewHolder.setImage(context.getApplicationContext(),model.getImage());
-                viewHolder.setuserImage(context.getApplicationContext(),model.getuserImage());
-                viewHolder.setLikeBtn(keyval);
-                viewHolder.setCommentBtn(keyval);
-                viewHolder.setTime(post_key);
+                    final String post_key = getRef(position).getKey();
+                    final String keyval = model.getKey();
+                    final String category_key = model.getCategory();
+                    final String location_key = model.getLocation();
+                    final String imageid = model.getImage();
 
-                viewHolder.mRlayout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent singleblogintent = new Intent(context, SinglePost.class);
-                        singleblogintent.putExtra("blog_id",keyval);
-                        singleblogintent.putExtra("category_id",category_key);
-                        singleblogintent.putExtra("location_id",location_key);
-                        startActivity(singleblogintent);
-                    }
-                });
+                    viewHolder.setTitle(model.getTitle());
+                    viewHolder.setDesc(model.getDesc());
+                    viewHolder.setTelephone(model.getTelephone());
+                    viewHolder.setLocation(model.getLocation());
+                    viewHolder.setUsername(model.getUsername());
+                    viewHolder.setImage(context.getApplicationContext(), model.getImage());
+                    viewHolder.setuserImage(context.getApplicationContext(), model.getuserImage());
+                    viewHolder.setLikeBtn(keyval);
+                    viewHolder.setCommentBtn(keyval);
+                    viewHolder.setTime(post_key);
 
-                viewHolder.mCommentLayout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if(imageid.equals("default")){
-                            Intent singleblogintent = new Intent(context, SinglePostNoImage.class);
-                            singleblogintent.putExtra("blog_id",keyval);
-                            singleblogintent.putExtra("category_id",category_key);
-                            singleblogintent.putExtra("location_id",location_key);
-                            startActivity(singleblogintent);
-                        }
-                        else{
+                    viewHolder.mRlayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
                             Intent singleblogintent = new Intent(context, SinglePost.class);
-                            singleblogintent.putExtra("blog_id",keyval);
-                            singleblogintent.putExtra("category_id",category_key);
-                            singleblogintent.putExtra("location_id",location_key);
+                            singleblogintent.putExtra("blog_id", keyval);
+                            singleblogintent.putExtra("category_id", category_key);
+                            singleblogintent.putExtra("location_id", location_key);
                             startActivity(singleblogintent);
                         }
-                    }
-                });
+                    });
 
-                viewHolder.mcommentBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if(imageid.equals("default")){
-                            Intent singleblogintent = new Intent(context, SinglePostNoImage.class);
-                            singleblogintent.putExtra("blog_id",keyval);
-                            singleblogintent.putExtra("category_id",category_key);
-                            singleblogintent.putExtra("location_id",location_key);
-                            startActivity(singleblogintent);
+                    viewHolder.mCommentLayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (imageid.equals("default")) {
+                                Intent singleblogintent = new Intent(context, SinglePostNoImage.class);
+                                singleblogintent.putExtra("blog_id", keyval);
+                                singleblogintent.putExtra("category_id", category_key);
+                                singleblogintent.putExtra("location_id", location_key);
+                                startActivity(singleblogintent);
+                            } else {
+                                Intent singleblogintent = new Intent(context, SinglePost.class);
+                                singleblogintent.putExtra("blog_id", keyval);
+                                singleblogintent.putExtra("category_id", category_key);
+                                singleblogintent.putExtra("location_id", location_key);
+                                startActivity(singleblogintent);
+                            }
                         }
-                        else{
-                            Intent singleblogintent = new Intent(context, SinglePost.class);
-                            singleblogintent.putExtra("blog_id",keyval);
-                            singleblogintent.putExtra("category_id",category_key);
-                            singleblogintent.putExtra("location_id",location_key);
-                            startActivity(singleblogintent);
+                    });
+
+                    viewHolder.mcommentBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (imageid.equals("default")) {
+                                Intent singleblogintent = new Intent(context, SinglePostNoImage.class);
+                                singleblogintent.putExtra("blog_id", keyval);
+                                singleblogintent.putExtra("category_id", category_key);
+                                singleblogintent.putExtra("location_id", location_key);
+                                startActivity(singleblogintent);
+                            } else {
+                                Intent singleblogintent = new Intent(context, SinglePost.class);
+                                singleblogintent.putExtra("blog_id", keyval);
+                                singleblogintent.putExtra("category_id", category_key);
+                                singleblogintent.putExtra("location_id", location_key);
+                                startActivity(singleblogintent);
+                            }
                         }
-                    }
-                });
+                    });
 
 
-                viewHolder.mLikebtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                    viewHolder.mLikebtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
 
-                        mProcessLike = true;
+                            mProcessLike = true;
 
-                        mDatabaseLike.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                if (mProcessLike) {
+                            mDatabaseLike.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    if (mProcessLike) {
 
-                                    if (dataSnapshot.child(keyval).hasChild(mAuth.getCurrentUser().getUid())) {
+                                        if (dataSnapshot.child(keyval).hasChild(mAuth.getCurrentUser().getUid())) {
 
-                                        mDatabaseLike.child(keyval).child(mAuth.getCurrentUser().getUid()).removeValue();
-                                        mProcessLike = false;
+                                            mDatabaseLike.child(keyval).child(mAuth.getCurrentUser().getUid()).removeValue();
+                                            mProcessLike = false;
 
-                                    } else {
-                                        mDatabaseLike.child(keyval).child(mAuth.getCurrentUser().getUid()).setValue("RandomValue");
-                                        mProcessLike = false;
+                                        } else {
+                                            mDatabaseLike.child(keyval).child(mAuth.getCurrentUser().getUid()).setValue("RandomValue");
+                                            mProcessLike = false;
+                                        }
                                     }
+
                                 }
 
-                            }
-                            @Override
-                            public void onCancelled (DatabaseError databaseError){
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
 
-                            }
-                        });
-                    }
-                });
-            }
-        };
+                                }
+                            });
+                        }
+                    });
+                }
+            };
+        }
 
         mBlogList.setAdapter(firebaseRecyclerAdapter);
         return rootView;

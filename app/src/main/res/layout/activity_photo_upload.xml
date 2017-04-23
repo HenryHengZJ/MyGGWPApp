@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
+            android:id="@+id/imageButton2"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:text="CAMERA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cameraBtn"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:alpha="0.7"
+            android:textStyle="normal|bold"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_panorama_black_24dp"
+            android:id="@+id/imageButton3"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical" />
+
+        <Button
+            android:text="GALLERY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/galleryBtn"
+            android:visibility="visible"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:alpha="0.7"
+            android:textStyle="normal|bold"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

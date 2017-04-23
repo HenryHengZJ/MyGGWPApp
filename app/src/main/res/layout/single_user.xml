@@ -22,10 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userpostBtn"
-            android:background="?android:attr/colorAccent"
             android:layout_marginRight="0.5dp"
             android:textColor="@color/buttonTextColor"
-            android:alpha="0.9" />
+            android:alpha="0.8"
+            android:background="@color/colorAccent" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -40,9 +40,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/userprofileBtn"
             android:layout_weight="1"
-            android:background="?android:attr/colorAccent"
             android:textColor="@color/buttonTextColor"
-            android:alpha="0.9" />
+            android:alpha="0.8"
+            android:background="@color/colorAccent" />
     </RelativeLayout>
 
     </LinearLayout>

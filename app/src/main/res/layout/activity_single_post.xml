@@ -92,7 +92,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/txtTime"
                         android:paddingLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:textStyle="normal|bold" />
 
                     <TextView
                         android:text="TextView"

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo1"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo2"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo3"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo4"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo5"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo6"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo7"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo8"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo9"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo10"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo11"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo12"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo13"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo14"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo15"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo16"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo17"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo18"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo19"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo20"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo21"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo22"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo23"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo24"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo25"
+                    android:text="RadioButton 1"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo26"
+                    android:text="RadioButton 2"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo27"
+                    android:text="RadioButton 3"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo28"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdo29"
+                    android:text="RadioButton 4"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:textSize="24sp"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone" />
+
+
+            </RadioGroup>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

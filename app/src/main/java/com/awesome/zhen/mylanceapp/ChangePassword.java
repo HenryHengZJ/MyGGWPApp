@@ -24,6 +24,7 @@ public class ChangePassword extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
@@ -98,6 +99,7 @@ public class ChangePassword extends AppCompatActivity {
         int id = item.getItemId();
         if (id == android.R.id.home) {
             onBackPressed();
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             return true;
         }
         return super.onOptionsItemSelected(item);

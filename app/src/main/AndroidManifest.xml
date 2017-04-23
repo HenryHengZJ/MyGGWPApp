@@ -84,6 +84,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/NormalAppTheme" />
         <activity
+            android:name="com.awesome.zhen.mylanceapp.EditPost"
+            android:label="更换"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
             android:name="com.awesome.zhen.mylanceapp.Settings"
             android:label="设置"
             android:screenOrientation="portrait"

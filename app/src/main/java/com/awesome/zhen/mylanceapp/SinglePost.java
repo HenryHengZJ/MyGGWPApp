@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,6 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -39,6 +42,8 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -94,6 +99,7 @@ public class SinglePost extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_post);
 
@@ -102,12 +108,6 @@ public class SinglePost extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mProgress = new ProgressDialog(this);
-
-        //Bundle extras = this.getIntent().getExtras();
-        //post_key = extras.getString("blog_id");
-        //location_key = extras.getString("location_id");
-       // category_key = extras.getString("category_id");
-
 
         post_key = getIntent().getStringExtra("blog_id");
         location_key = getIntent().getStringExtra("location_id");
@@ -274,7 +274,7 @@ public class SinglePost extends AppCompatActivity {
                 }
 
                 if(post_image != null && post_image.equals("default")){
-
+                    mBlogSingleImage.setVisibility(View.GONE);
                 }
                 else {
                     mBlogSingleImage.setVisibility(View.VISIBLE);
@@ -597,6 +597,7 @@ public class SinglePost extends AppCompatActivity {
         int id = item.getItemId();
         if (id == android.R.id.home) {
             onBackPressed();
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -620,12 +621,15 @@ public class SinglePost extends AppCompatActivity {
         mReportbtn.setText("Report");
         Button mRemovebtn = (Button) dialog.findViewById(R.id.removeBtn);
         mRemovebtn.setText("Remove");
+        Button mEditbtn = (Button) dialog.findViewById(R.id.editBtn);
+        mEditbtn.setText("Edit");
 
         dialog.show();
 
         if(mAuth.getCurrentUser().getUid().equals(post_uid)){
 
             mRemovebtn.setVisibility(View.VISIBLE);
+            mEditbtn.setVisibility(View.VISIBLE);
 
         }
 
@@ -637,6 +641,22 @@ public class SinglePost extends AppCompatActivity {
                 mBlog.child(allblogkey).removeValue();
                 mDatabaseLike.child(post_key).removeValue();
                 mComment.child(post_key).removeValue();
+
+                StorageReference photoRef = FirebaseStorage.getInstance().getReferenceFromUrl(post_image);
+                photoRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        // File deleted successfully
+                        Log.d(TAG, "onSuccess: deleted file");
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Uh-oh, an error occurred!
+                        Log.d(TAG, "onFailure: did not delete file");
+                    }
+                });
+
                 mCommentLike.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -668,6 +688,21 @@ public class SinglePost extends AppCompatActivity {
 
                 dialog.dismiss();
                 onBackPressed();
+            }
+        });
+
+        mEditbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent editintent = new Intent(SinglePost.this, EditPost.class);
+                editintent.putExtra("blog_id",post_key);
+                editintent.putExtra("category_id",category_key);
+                editintent.putExtra("location_id",location_key);
+                startActivity(editintent);
+
+                dialog.dismiss();
+
             }
         });
 

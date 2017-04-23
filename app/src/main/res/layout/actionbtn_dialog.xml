@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="Edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editBtn"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:alpha="0.7"
+        android:textStyle="normal|bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cast_expanded_controller_background_color">
+
+    </RelativeLayout>
+
+    <Button
+    android:text="Remove"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/removeBtn"
+    android:visibility="gone"
+    android:background="@android:color/white"
+    android:textColor="@android:color/black"
+    android:alpha="0.7"
+    android:textStyle="normal|bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cast_expanded_controller_background_color">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="Report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reportBtn"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:alpha="0.7"
+        android:textStyle="normal|bold" />
+
+</LinearLayout>

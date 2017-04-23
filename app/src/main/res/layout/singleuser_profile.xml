@@ -6,16 +6,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:background="@android:color/background_light">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|end"
-        android:src="@android:drawable/ic_menu_save"
-        app:backgroundTint="@color/fab_material_red_900"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="240dp" />
-
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:isScrollContainer="true"
@@ -63,7 +53,7 @@
                         android:background="@android:color/transparent"
                         android:layout_weight="1"
                         android:layout_alignParentTop="true"
-                        android:layout_toEndOf="@+id/userimage" />
+                        />
 
                 </RelativeLayout>
 
@@ -240,5 +230,15 @@
     </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:src="@android:drawable/ic_menu_save"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="240dp" />
 
 </android.support.design.widget.CoordinatorLayout>
